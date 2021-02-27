@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx nodemon --exec babel-node src/index.js",
     "start": "node build/index.js",
-    "build": "npx babel src/index.js -o build/index.js"
+    "build": "npx babel src/index.js -o build/index.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,9 @@
     "@babel/core": "^7.13.8",
     "@babel/node": "^7.13.0",
     "@babel/preset-env": "^7.13.8",
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
