@@ -1,0 +1,20 @@
+{
+  "name": "tools-backend",
+  "version": "1.0.0",
+  "description": "A tools backend in node using graphql and mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoarPort/tools-backend.git"
+  },
+  "keywords": [],
+  "author": "Gibran Ayala <gibran@anunciatedigital.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RoarPort/tools-backend/issues"
+  },
+  "homepage": "https://github.com/RoarPort/tools-backend#readme"
+}
