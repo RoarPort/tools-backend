@@ -4,7 +4,10 @@
   "description": "A tools backend in node using graphql and mongo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx nodemon --exec babel-node src/index.js",
+    "start": "node build/index.js",
+    "build": "npx babel src/index.js -o build/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +24,13 @@
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
-    "graphql-tools": "^7.0.4"
+    "graphql-tools": "^7.0.4",
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/node": "^7.13.0",
-    "@babel/preset-env": "^7.13.8"
+    "@babel/preset-env": "^7.13.8",
+    "babel-cli": "^6.26.0"
   }
 }
