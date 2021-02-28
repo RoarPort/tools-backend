@@ -67,5 +67,8 @@ type Query {
   getOneTagById(id: ID!): Tag
   " recipie "
   getAllRecipies: [Recipie]
-  getOneRecipie(id: ID!): Recipie
+  getOneRecipieById(id: ID!): Recipie
+  " order "
+  getAllOrders: [Order]
+  getOneOrderById(id: ID!): Order
 }
