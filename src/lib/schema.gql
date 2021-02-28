@@ -1,4 +1,12 @@
+type Users {
+  name: String!
+  email: String!
+  pwd: String!
+  level: String!
+}
+
 type Query {
-  msg: String
-  hello: String
+  " users "
+  getAllUsers: [Users]
+  getOneUserById(id: ID!): Users
 }

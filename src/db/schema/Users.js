@@ -5,7 +5,6 @@ const schema = new Schema({
   email: 'string',
   pwd: 'string',
   level: 'string',
-  icon: 'buffer',
 });
 
 const User = model('users', schema);
