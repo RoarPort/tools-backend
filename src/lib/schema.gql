@@ -31,6 +31,21 @@ type Recipie {
   tagsId: String!
 }
 
+type OrderInfo {
+  quantity: Float!
+  description: String!
+  total: Float!
+  date: String!
+}
+
+type Order {
+  _id: ID!
+  info: [OrderInfo]!
+  total: Float!
+  prepay: Float!
+  topay: Float!
+}
+
 type Query {
   " users "
   getAllUsers: [User]
