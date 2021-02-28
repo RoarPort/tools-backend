@@ -26,9 +26,9 @@ type Tag {
 type Recipie {
   _id: ID!
   title: String!
-  ingredients: String!
-  steps: String!
-  tagsId: String!
+  ingredients: [String]!
+  steps: [String]!
+  tagsId: [String]!
 }
 
 type OrderInfo {
@@ -44,6 +44,14 @@ type Order {
   total: Float!
   prepay: Float!
   topay: Float!
+}
+
+type Client {
+  name: String!
+  telephones: [String]!
+  emails: [String]!
+  direction: [String]!
+  tagID: [string]
 }
 
 type Query {
