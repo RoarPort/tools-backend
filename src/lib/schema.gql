@@ -65,4 +65,7 @@ type Query {
   " tag "
   getAllTags: [Tag]
   getOneTagById(id: ID!): Tag
+  " recipie "
+  getAllRecipies: [Recipie]
+  getOneRecipie(id: ID!): Recipie
 }
