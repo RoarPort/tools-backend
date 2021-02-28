@@ -4,7 +4,11 @@
   "description": "A tools backend in node using graphql and mongo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx nodemon --exec babel-node src/index.js -L",
+    "start": "node build/index.js",
+    "build": "npx babel src/index.js -o build/index.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,22 @@
   "bugs": {
     "url": "https://github.com/RoarPort/tools-backend/issues"
   },
-  "homepage": "https://github.com/RoarPort/tools-backend#readme"
+  "homepage": "https://github.com/RoarPort/tools-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "^7.13.8",
+    "babel-cli": "^6.26.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
 }
