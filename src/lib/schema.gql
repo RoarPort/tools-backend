@@ -8,6 +8,7 @@ type User {
 }
 
 type Todo {
+  _id: ID!
   title: String!
   description: String!
   for: [String]!
@@ -58,4 +59,7 @@ type Query {
   " users "
   getAllUsers: [User]
   getOneUserById(id: ID!): User
+  " todo "
+  getAllTodos: [Todo]
+  getOneTodoById(id: ID!): Todo
 }
