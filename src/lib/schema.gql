@@ -1,8 +1,18 @@
+
 type Users {
+  _id: String!
   name: String!
   email: String!
   pwd: String!
   level: String!
+}
+
+type Todo {
+  title: String
+  description: String
+  for: [String]
+  shouldBeIn: String 
+  tagId: [String]
 }
 
 type Query {
