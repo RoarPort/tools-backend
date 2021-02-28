@@ -1,17 +1,10 @@
-const mongoose = require('mongoose');
+const app = require('express')();
 
-function connectToDB() {
-  const url = 'mongodb://db/tools';
+const port = 4000;
 
-  mongoose.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+app.get('/', (req, res) => {
+  res.send('Hello');
+});
 
-  const db = mongoose.connection;
-  /* eslint no-console: 0 */
-  db.on('error', console.error.bind(console, 'connection error'));
-  db.once('open', () => console.log('DB connected'));
-}
-
-connectToDB();
+/* eslint no-console: 0 */
+app.listen(port, () => console.log('listening on port 4000'));
