@@ -62,4 +62,7 @@ type Query {
   " todo "
   getAllTodos: [Todo]
   getOneTodoById(id: ID!): Todo
+  " tag "
+  getAllTags: [Tag]
+  getOneTagById(id: ID!): Tag
 }
