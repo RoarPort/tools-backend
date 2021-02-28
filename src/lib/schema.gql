@@ -16,11 +16,19 @@ type Todo {
 }
 
 type Tag {
-  _id: String!
+  _id: ID!
   name: String!
   publishBy: String!
   description: String!
   color: String!
+}
+
+type Recipie {
+  _id: ID!
+  title: String!
+  ingredients: String!
+  steps: String!
+  tagsId: String!
 }
 
 type Query {
