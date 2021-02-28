@@ -71,4 +71,7 @@ type Query {
   " order "
   getAllOrders: [Order]
   getOneOrderById(id: ID!): Order
+  " client "
+  getAllClients: [Client]
+  getOneClientById(id: ID!): Client
 }
