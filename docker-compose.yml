@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   app:
+    depends_on: 
+      - "db"
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,3 +12,6 @@ services:
       - /usr/src/app/node_modules
     ports: 
       - "4000:4000"
+  db:
+    image: mongo:4.4.2
+    

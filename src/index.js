@@ -1,12 +1,17 @@
-/* eslint no-console: 0 */
-console.log('Docker');
+const mongoose = require('mongoose');
 
-function main() {
-  return 0;
+function connectToDB() {
+  const url = 'mongodb://db/tools';
+
+  mongoose.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  const db = mongoose.connection;
+  /* eslint no-console: 0 */
+  db.on('error', console.error.bind(console, 'connection error'));
+  db.once('open', () => console.log('DB connected'));
 }
 
-main();
-
-console.log('Hello');
-
-console.log("Hello");
+connectToDB();
